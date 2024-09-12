@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .language-container {
+            margin-top: 50px;
+        }
+        .language-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .language-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Preferred Language</h1>
+    <div class="language-container">
+        <button class="language-button" onclick="redirectToForm('en')">English</button>
+        <button class="language-button" onclick="redirectToForm('es')">Spanish</button>
+        <button class="language-button" onclick="redirectToForm('hm')">Hmong</button>
+    </div>
+
+    <script>
+        // Function to redirect to the Google Form based on the language selected
+        function redirectToForm(language) {
+            let formUrls = {
+                'en': 'https://docs.google.com/forms/d/10FuyOCM1AvEvoUd_qBTDvS6igkNLsz-vw7ybpwXQ39s/edit', // English form URL
+                'es': 'https://docs.google.com/forms/d/11gnSclwm1FAj92Y2T65U69HaUsHbTyaPlwu49l70-44/edit', // Spanish form URL
+                'hm': 'https://docs.google.com/forms/d/1ON6DaI8nXSr6GDt41BYckgAodSre5MOSDYTWm8jWMJQ/edit'  // Hmong form URL
+            };
+            window.location.href = formUrls[language];
+        }
+    </script>
+</body>
+</html>
